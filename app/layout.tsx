@@ -26,11 +26,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <HydrationGate>
           <AgeGate />
           <header className="border-b" style={{ borderColor: 'var(--border)' }}>
-            <nav className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-              <a href="/" className="font-bold text-lg">
+            <nav className="max-w-5xl mx-auto px-4 py-3 sm:py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <a href="/" className="font-bold text-lg whitespace-nowrap">
                 {SITE_NAME}
               </a>
-              <div className="flex gap-4 text-sm" style={{ color: 'var(--text-muted)' }}>
+              <div
+                className="flex gap-4 text-sm overflow-x-auto whitespace-nowrap -mx-4 px-4 sm:mx-0 sm:px-0"
+                style={{ color: 'var(--text-muted)' }}
+              >
                 <a href="/blackjack-simulator/">Simulator</a>
                 <a href="/blackjack-calculator/">Calculator</a>
                 <a href="/house-edge-calculator/">House Edge</a>
