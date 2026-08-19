@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 {SITE_NAME}
               </a>
               <div
-                className="flex flex-wrap gap-x-4 gap-y-1 text-sm"
+                className="flex flex-wrap gap-x-5 gap-y-3 sm:gap-x-4 sm:gap-y-1 text-sm [&_a]:py-1.5 sm:[&_a]:py-0"
                 style={{ color: 'var(--text-muted)' }}
               >
                 <a href="/blackjack-simulator/">Simulator</a>
