@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   },
   description:
     'Free blackjack simulator and basic-strategy calculator. Rule-set aware house edge, payout math, and dynamically generated strategy charts — no signup.',
+  verification: { google: 'Yu9c9dxu3UgAHtz59_THypGpkA6kDoVkgQE7zcIEUio' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
