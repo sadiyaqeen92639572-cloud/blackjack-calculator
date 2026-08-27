@@ -7,11 +7,13 @@ import { SITE_NAME, SITE_URL, getWebSiteOrgSchema } from '@/lib/seo';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Basic Strategy, House Edge & Session Simulator`,
+    // Homepage is the hub — it deliberately does NOT target the exact
+    // "blackjack calculator" head term; that belongs to /blackjack-calculator/.
+    default: 'Blackjack Calculators & Tools — Strategy, House Edge, Payout & Simulator',
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    'Free blackjack simulator and basic-strategy calculator. Rule-set aware house edge, payout math, and dynamically generated strategy charts — no signup.',
+    'A set of free, rule-set-aware blackjack tools: optimal-move calculator, session simulator, house-edge calculator, payout calculator, and a live basic-strategy chart. No signup.',
   verification: { google: 'Yu9c9dxu3UgAHtz59_THypGpkA6kDoVkgQE7zcIEUio' },
 };
 
