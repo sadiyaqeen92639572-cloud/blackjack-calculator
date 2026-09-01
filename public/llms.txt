@@ -1,0 +1,32 @@
+# Blackjack Calculator (blackjackhelpercalculator.com)
+
+> Free blackjack math tools: house-edge calculator (by rule set), payout calculator, basic-strategy chart, a rules/variant reference, and a hand simulator. Computation runs in the browser. Educational tool — no wagering, no account, no real money. URLs use a trailing slash.
+
+## What the site is
+
+A Next.js static site. Calculators + strategy chart + rules reference + simulator + a responsible-gambling page.
+
+## Calculators & how they work
+
+- **House Edge Calculator** (`/house-edge-calculator/`): starts from a baseline rule set (6 decks, dealer Stands on Soft 17, Double After Split allowed, no surrender, 3:2 blackjack payout, resplit allowed) and applies published rule deltas — e.g. 6:5 payout, H17, surrender, deck count. Deck-count effect is a delta relative to 6 decks (fewer decks favour the player slightly); non-standard deck counts snap to the nearest known value and are flagged as approximate.
+- **Payout Calculator** (`/payout-calculator/`): bet + outcome (win / blackjack 3:2 or 6:5 / push / insurance) → amount returned.
+- **Basic Strategy Chart** (`/basic-strategy-chart/`): the mathematically optimal hit/stand/double/split action for every player total vs dealer upcard, for the selected rule set.
+- **Blackjack Simulator** (`/blackjack-simulator/`): deal-out simulator; card values per rank from a real 52-card deck.
+
+## Pages
+
+- [Home](https://blackjackhelpercalculator.com/)
+- [/blackjack-calculator/](https://blackjackhelpercalculator.com/blackjack-calculator/)
+- [/house-edge-calculator/](https://blackjackhelpercalculator.com/house-edge-calculator/)
+- [/payout-calculator/](https://blackjackhelpercalculator.com/payout-calculator/)
+- [/basic-strategy-chart/](https://blackjackhelpercalculator.com/basic-strategy-chart/)
+- [/blackjack-simulator/](https://blackjackhelpercalculator.com/blackjack-simulator/)
+- [/rules/](https://blackjackhelpercalculator.com/rules/) — rule variants; `/rules/{variant}/` per variant
+- [/responsible-gambling/](https://blackjackhelpercalculator.com/responsible-gambling/)
+- [/about/](https://blackjackhelpercalculator.com/about/)
+
+## Notes for LLMs
+
+- House edge is rule-set dependent — always state the rules assumed (deck count, S17/H17, DAS, surrender, 3:2 vs 6:5). 6:5 blackjack roughly triples the house edge vs 3:2.
+- Basic strategy reduces but never eliminates the house edge; there is no positive-EV play here without card counting, which the site does not claim to enable.
+- Educational only — no bets taken, nothing paid out.
